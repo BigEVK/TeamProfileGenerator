@@ -1,7 +1,7 @@
 
 const inquirer = require('inquirer');
-const generatePage = require('/src/pageTemplate');
-const { writeFile, copyFile } = require('./utils/generateSite')
+const generatePage = require('./src/pageTemplate');
+const { writeFile, copyFile } = require('./src/generateSite')
 
 
 
@@ -28,4 +28,7 @@ const promptTeam = () => {
             }
         }
     ])
-}
+};
+
+promptTeam()
+    .then

@@ -1,5 +1,25 @@
 {
   "dependencies": {
-    "inquirer": "^9.0.2"
-  }
+    "inquirer": "^8.2.4"
+  },
+  "name": "teamprofilegenerator",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigEVK/TeamProfileGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigEVK/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/BigEVK/TeamProfileGenerator#readme"
 }
