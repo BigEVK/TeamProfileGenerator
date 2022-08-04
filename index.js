@@ -18,17 +18,29 @@ const promptTeam = () => {
             type: 'list',
             name: 'team',
             message: 'Please choose which Team Member you would like to add. (Required)',
-            choices: ["Manager", "Engineer", "Intern", "Finished"],
-            validate: teamInput => {
-                if (teamInput) {
-                    return true;
-                } else {
-                    console.log('Please choose a Team Member to add or select Finished.');
-                }
-            }
+            choices: ["Manager", "Engineer", "Intern", "Finished"]
+            // validate: teamInput => {
+            //     if (teamInput) {
+            //         return true;
+            //     } else {
+            //         console.log('Please choose a Team Member to add or select Finished.');
+            //     }
+            // }
         }
     ])
 };
 
-promptTeam()
-    .then
+promptTeam(generatePage)
+.then(pageHTML =>{
+    return writeFile(pageHTML);
+})
+.then(writeFileResponse => {
+    console.log(writeFileResponse);
+    return copyFile();
+})
+.then(copyFileResponse => {
+    console.log(copyFileResponse);
+})
+.catch(err => {
+    console.log(err);
+})
